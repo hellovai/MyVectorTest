@@ -60,6 +60,16 @@ const T& MyVector<T>::back() const {
     return m_data;
 };
 
+template<typename T>
+MyVector<T>::Iterator MyVector<T>::begin() {
+    return Iterator(&m_data);
+}
+
+template<typename T>
+MyVector<T>::Iterator::Iterator(T* index) {
+
+}
+
 // Template Declarations
 #define DECLARE(type) template class MyVector<type>;
 DECLARE(int);

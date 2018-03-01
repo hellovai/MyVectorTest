@@ -1,6 +1,7 @@
 #ifndef MYVECTOR_HEADER
 #define MYVECTOR_HEADER
 
+
 template<typename T>
 class MyVector
 {
@@ -39,6 +40,31 @@ public:
     // operator<=
     // operator>
     // operator>=
+
+public:
+    class Iterator
+    {
+    public:
+        // Constructor + Destructor
+        Iterator(T* index);
+        ~Iterator();
+
+        // Operators
+        // ++
+        // --
+        // ==
+        // !=
+        // *
+        // disable all other operators!!!!!
+    }
+
+    // TODO: create reverse iterator class
+
+    // Iterators
+    Iterator begin();
+    Iterator end();
+    Iterator rbegin();
+    Iterator rend();
 
 private:
     T m_data;

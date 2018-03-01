@@ -8,5 +8,10 @@ int main() {
     std::cout << x[0] << std::endl;
     std::cout << x.at(0) << std::endl;
 
+    for (MyVector<int>::Iterator i = x.begin(); i != x.end(); ++i)
+    {
+    	std::cout << *i << std::endl;
+    }
+
     return 0;
 }
